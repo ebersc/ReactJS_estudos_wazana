@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>ReactJS</title>
+    </head>
+    <body>
+        <div id="root">
+
+        </div>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script type="text/javascript">
+            // var newElement = document.createElement('h1');
+            // newElement.innerText = "Hello World JS!";
+
+            var newElement = React.createElement("h1", {children:"Hello World ReactJS!"});
+
+            var rootElement = document.getElementById("root");
+            // rootElement.appendChild(newElement);
+
+            ReactDOM.render(newElement, rootElement);
+        </script>
+    </body>
+</html>
