@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>ReactJS</title>
+    </head>
+    <body>
+        <div id="root">
+
+        </div>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <script type="text/babel">
+            var rootElement = document.getElementById("root");
+
+
+            //Componentização utilizando function
+
+            function WelcomeFunc(props) {
+                return <h1>Hello, {props.name}</h1>;
+            }
+
+            //Componente utilizando arrow function
+            const Welcome = (props) => <h1>{props.nome}</h1>
+
+            //Reutilização de componentes usando return
+            const App = () => {
+                return (
+                    <div>
+                        <Welcome nome="Eberson 1"/>
+                        <Welcome nome="Eberson 2"/>
+                        <Welcome nome="Eberson 3"/>
+                    </div>
+                )
+            }
+
+            //Renderezando componente na tela
+            ReactDOM.render(<App nome="Eberson"/>, rootElement);
+            // ReactDOM.render(<Welcome nome="Eberson"/>, rootElement);
+
+        </script>
+    </body>
+</html>
